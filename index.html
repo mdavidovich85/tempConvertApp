@@ -1,0 +1,59 @@
+<!--
+Temperature Converter
+by Mike Davidovich
+Created with Framework7 https://framework7.io/ with permission
+CSC 410 Summer Semester 2018
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS -->
+    <link rel="stylesheet" href="core/css/framework7.min.css">
+</head>
+<body>
+<!-- App root element -->
+<div id="app">
+    <!-- Statusbar overlay -->
+    <div class="statusbar"></div>
+
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main">
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-name="home" class="page">
+
+            <!-- Top Navbar -->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="title">Temperature Converter</div>
+                </div>
+            </div>
+
+            <!-- Scrollable page content -->
+            <div class="page-content">
+                <div class="block">
+                <input type="number" name="input" id="input" placeholder="Degrees In Fahrenheit" class="">
+                    <p></p>
+                <button class="col button button-fill" onclick="getElementById('output').innerHTML=convertCelToFar(parseInt(document.getElementById('input').value)) + ' Degrees Celsius'">Convert to Celsius</button>
+                <p id="output">Degrees Celsius</p>
+                    <input class="col button button-fill" type="button" value="Reset" onClick="window.location.reload()">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Path to Framework7 Library JS-->
+<script type="text/javascript" src="core/js/framework7.min.js"></script>
+<!-- Path to your app js-->
+<script type="text/javascript" src="core/js/app.js"></script>
+<script type="text/javascript" src="core/js/tempConvert.js"></script>
+</body>
+</html>
